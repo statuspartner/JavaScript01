@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+<script>
+  "use strict";
+
+  /* Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+  где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+  В зависимости от переданного значения операции (использовать switch) выполнить одну из арифметических операций
+  (использовать функции из задания 4) и вернуть полученное значение.
+  */
+
+  /**
+   * Функция суммы.
+   * @param {number} a - первый параметр.
+   * @param {number} b - второй параметр.
+   * @return {number} Возвращает число, если было передано два числа.
+   */
+  function add(a, b) {
+    return a + b;
+  }
+
+  /**
+   * Функция разницы.
+   * @param {number} a - первый параметр.
+   * @param {number} b - второй параметр.
+   * @return {number} Возвращает число, если было передано два числа.
+   */
+  function reduce(a, b) {
+    return a - b;
+  }
+
+  /**
+   * Функция частного.
+   * @param {number} a - первый параметр.
+   * @param {number} b - второй параметр.
+   * @return {number} Возвращает число, если было передано два числа.
+   */
+  function divide(a, b) {
+    return a / b;
+  }
+
+  /**
+   * Функция произведения.
+   * @param {number} a - первый параметр.
+   * @param {number} b - второй параметр.
+   * @return {number} Возвращает число, если было передано два числа.
+   */
+  function multiply(a, b) {
+    return a * b;
+  }
+
+  /**
+   * Функция проводит одну из арифметических операций.
+   * @param {number} arg1 - первый параметр.
+   * @param {number} arg2 - второй параметр.
+   * @param {string} operation - операция, которую нужно выполнить.
+   * @return {number} Значение, которое вернет функция выбранной операции.
+   */
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case 'add':
+        return add(arg1, arg2);
+      case 'reduce':
+        return reduce(arg1, arg2);
+      case 'divide':
+        return divide(arg1, arg2);
+      case 'multiply':
+        return multiply(arg1, arg2);
+    }
+  }
+
+  console.log(mathOperation(3, 9, 'add')); // 12
+  console.log(mathOperation(3, 9, 'reduce')); // -6
+  console.log(mathOperation(3, 9, 'divide')); // 0.3333333333333333
+  console.log(mathOperation(3, 9, 'multiply')); // 27
+
+</script>
