@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+"use strict";
+
+console.log(10 + 10 + "10"); // 2010 - string. Два первых операнда сложились и "склеились" с третьим строчным.
+console.log(10 + "10" + 10); // 101010 - тип данных - string. Все операнды "склеиваются" в одну строку.
+console.log(10 + 10 + +"10"); // 3 - number. Сумма всех операндов - чисел, третий тоже число - благодаря унарному плюсу.
+console.log(10 / -""); // -Infinity - number. Деление на нуль (минус нуль) дает бесконечность в JavaScript.
+console.log(10 / +"2,5"); // NaN - number. JS понимает только точку в дробном числе, поэтому результат неизвестен.
+
+console.log(typeof (10 + 10 + "10")); // string
+console.log(typeof (10 + "10" + 10) ); // string
+console.log(typeof (10 + 10 + +"10")); // number
+console.log(typeof (10 / -"")); // number
+console.log(typeof (10 / +"2,5")); // number
+
+</script>
